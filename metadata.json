@@ -1,0 +1,7 @@
+{
+  "name": "AutoMeter Pro",
+  "description": "Digital Auto Meter & Route Transparency App",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

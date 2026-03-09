@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-gray-900 flex justify-center items-center min-h-[100dvh] m-0 overflow-hidden;
+  }
+  #root {
+    @apply w-full h-[100dvh] bg-white relative overflow-hidden flex flex-col transform-gpu;
+  }
+  @media (min-width: 640px) {
+    #root {
+      @apply max-w-[400px] h-[850px] max-h-[90vh] rounded-[40px] shadow-2xl border-[8px] border-gray-800 my-8;
+    }
+  }
+}
