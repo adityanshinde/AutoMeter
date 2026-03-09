@@ -14,7 +14,8 @@ import QRSticker from './components/QRSticker';
 import SharedRideView from './components/SharedRideView';
 import { Ride, City } from './types';
 import { db, cleanupOldData } from './db';
-
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 type Tab = 'ride' | 'history' | 'fare-rules' | 'terms' | 'contact' | 'about' | 'driver-dashboard' | 'qr-sticker';
 
 export default function App() {
@@ -289,6 +290,8 @@ export default function App() {
         userMode={userMode}
         onModeChange={handleModeChange}
       />
+        <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
